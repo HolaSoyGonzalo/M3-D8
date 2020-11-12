@@ -60,17 +60,18 @@
       </nav>
        <div class="container  offset-md-3">
       <h1 >Details & Options</h1>
-      <h2 class="mt-3">Event details</h2>
+      <h2 class="mt-3">Product Details</h2>
       <div class="my-3" id="details"></div>
       <input
         type="button"
-        class="btn btn-success"
+        class="btn btn-success ml-1"
         value="EDIT"
         onclick="handleEdit()"
       />
       <input
         type="button"
         class="btn btn-danger"
+        style="margin-left: 345px;"
         value="DELETE"
         onclick="handleDelete()"
       />
@@ -96,13 +97,13 @@
 
           let element = document.createElement("div");
           element.innerHTML = `<div class="card " style="width: 30rem; margin:5px">
-      <img src="${event.imageUrl}" class="card-img-top" alt="...">
+      <img src="${event.imageUrl}" class="card-img-top"  alt="...">
       <div class="card-body">
-        <h4 class="card-title">${event.name}</h4>
-        <h5 class="card-title">${event.brand}</h5>
+        <h3 class="card-title bold">${event.name}</h3>
+        <h5 class="card-title ">${event.brand}</h5>
+        <h4>Description:</h4>
         <p class="card-text">${event.description}</p>
-        <h5 class="card-title">${event.price}€</h5>
-        <a class="btn btn-info" href="details.html?id=${event._id}">VIEW DETAILS</a>
+        <h2 class="card-title">${event.price}€</h2>
       </div>
     </div>`;
 

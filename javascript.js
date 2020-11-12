@@ -16,13 +16,16 @@ const fetchData = async () => {
       let row = document.querySelector(".row");
       row.innerHTML = data.map(
         (e) => `<div class="card" style="width: 14rem; margin:5px">
-      <img src="${e.imageUrl}" class="card-img-top" alt="...">
+      <img src="${e.imageUrl}" class="card-img-top" style="width:220px; height:230px; margin-top:3px" alt="...">
       <div class="card-body">
-        <h4 class="card-title">${e.name}</h4>
+        <h5 class="card-title">${e.name}</h5>
+        <hr/>
         <h5 class="card-title">${e.brand}</h5>
+        <hr/>
         <p class="card-text">${e.description}</p>
+        <hr/>
         <h5 class="card-title">${e.price}€</h5>
-        <a class="btn btn-info" href="details.html?id=${e._id}">VIEW DETAILS</a>
+        <a class="btn  btn-info" href="details.html?id=${e._id}">VIEW DETAILS</a>
       </div>
     </div>`
       );

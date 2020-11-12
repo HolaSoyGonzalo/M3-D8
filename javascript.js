@@ -6,7 +6,7 @@ const fetchData = async () => {
         method: "GET",
         headers: {
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFiZTYzYTRiY2RlMTAwMTc2MTZhYjgiLCJpYXQiOjE2MDUxMDExMTUsImV4cCI6MTYwNjMxMDcxNX0.fu7TBFIAbkpfobv_to0qZ3-tTppUKVwU2FSje2aOtBk",
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFkMzM4ZGFkOGMzODAwMTc1YTMwNjUiLCJpYXQiOjE2MDUxODY0NDUsImV4cCI6MTYwNjM5NjA0NX0.aQy-z_AwpGFuSJizNMkXSc3DH0ldpfq6DuiEPFx7hYg",
         },
       }
     );
@@ -22,7 +22,7 @@ const fetchData = async () => {
         <h5 class="card-title">${e.brand}</h5>
         <p class="card-text">${e.description}</p>
         <h5 class="card-title">${e.price}€</h5>
-        <a href="#" class="btn btn-danger">Buy</a>
+        <a class="btn btn-info" href="details.html?id=${e._id}">VIEW DETAILS</a>
       </div>
     </div>`
       );
@@ -51,7 +51,7 @@ const pushData = async (event) => {
         body: JSON.stringify(newProduct),
         headers: new Headers({
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFiZTYzYTRiY2RlMTAwMTc2MTZhYjgiLCJpYXQiOjE2MDUxMDExMTUsImV4cCI6MTYwNjMxMDcxNX0.fu7TBFIAbkpfobv_to0qZ3-tTppUKVwU2FSje2aOtBk",
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFkMzM4ZGFkOGMzODAwMTc1YTMwNjUiLCJpYXQiOjE2MDUxODY0NDUsImV4cCI6MTYwNjM5NjA0NX0.aQy-z_AwpGFuSJizNMkXSc3DH0ldpfq6DuiEPFx7hYg",
           "Content-Type": "application/json",
         }),
       }

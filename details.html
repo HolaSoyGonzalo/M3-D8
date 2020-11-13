@@ -78,22 +78,22 @@
     </div>
 
 
-    <!-- Optional JavaScript -->
+   
     <script>
         let id;
         const url = "https://striveschool-api.herokuapp.com/api/product/";
 
 
         window.onload = async () => {
-        let urlParams = new URLSearchParams(window.location.search); // creating a new instance of the URLSearchParams object
-        id = urlParams.get("id"); // saving the id retrieved from the url address bar
+        let urlParams = new URLSearchParams(window.location.search); 
+        id = urlParams.get("id");
 
         try {
           let response = await fetch(url + id, {headers: {
           Authorization:
             "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmFkMzM4ZGFkOGMzODAwMTc1YTMwNjUiLCJpYXQiOjE2MDUxODY0NDUsImV4cCI6MTYwNjM5NjA0NX0.aQy-z_AwpGFuSJizNMkXSc3DH0ldpfq6DuiEPFx7hYg",
-        },}); // contacting the endpoint for a single event
-          let event = await response.json(); // transforming the response body in an usable object, asyncronous operation!
+        },}); 
+          let event = await response.json(); 
 
           let element = document.createElement("div");
           element.innerHTML = `<div class="card " style="width: 30rem; margin:5px">
@@ -120,7 +120,7 @@
                 "Content-Type": "application/json",
               }), });
           if (response.ok) {
-            // checking the ok property which stores the successful result of the operation
+            
             alert("Event deleted successfully");
             location.assign("home.html");
           } else {

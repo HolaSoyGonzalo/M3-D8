@@ -39,12 +39,10 @@ const pushData = async (event) => {
   event.preventDefault();
 
   const newProduct = {
-    name: document.querySelector("#product-name").value,
-    description: document.querySelector("#product-description").value,
-    brand: document.querySelector("#product-brand").value,
-    imageUrl: document.querySelector("#product-img").value,
-
-    price: parseInt(document.querySelector("#product-price").value),
+    name: document.querySelector("#movie-name").value,
+    description: document.querySelector("#movie-description").value,
+    brand: document.querySelector("#movie-").value,
+    imageUrl: document.querySelector("#movie-img").value,
   };
   try {
     const response = await fetch(
